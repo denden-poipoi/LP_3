@@ -9,17 +9,274 @@
   <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/reset.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
+
 <body>
-  <header>
-    
+  <!--
+  <div id="loading">
+    <div id="loading_box">
+      <div class="loading-one">
+        <p class="loading-txt">ABC商事</p>
+      </div>
+    </div>
+    <div class="load-object animation_loading"></div>
+  </div>
+-->
+  <header id="header">
+    <div class="header_all">
+      <h3>ABC商事</h3>
+      <div class="logo_bg"></div>
+      <nav class="navbar" id="js-nav">
+        <ul>
+          <li><a href="#vision">VISION</a></li>
+          <li><a href="#service">SERVICE</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="drawer"></p>
   </header>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="js/script.js"></script>
+  <main>
+    <section id="top" class="top">
+      <div class="top_wrap">
+      </div>
+    </section>
+    <section class="topics">
+      <div class="inner">
+        <div class="intro">
+          <h2 class="section_ttl">TOPICS</h2>
+          <p class="intro_detail_date">
+            2021.1.1
+          </p>
+          <p class="intro_detail">
+            株式会社ABC商事設立
+          </p>
+        </div>
+        <div class="vision" id="vision">
+          <img class="faderotateTrigger" src="img/pic_01.jpg" alt="画像">
+          <div class="vision_txt faderotateTrigger">
+            <h2>VISION</h2>
+            <p class="vision_1">私たちは、革新技術の提供により、<br>世界的課題の解決に貢献します。</p>
+            <div class="vision_border"></div>
+            <p class="vision_2">わたしたちは新しい価値の創造を通じて社会に貢献します</p>
+            <p class="vision_2">
+              わたしたちは、革新技術・先端材料の提供により、世界的課題の解決に貢献します
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="service" id="service">
+      <h2>SERVICE</h2>
+      <div class="service_1">
+        <div class="service_1_bg"></div>
+        <img class='faderotateTrigger service_1_img' src="img/pic_02.jpg">
+        <div class='service_1_contents faderotateTrigger'>
+          <h3>CONSULTING<br>コンサルティング事業</h3>
+          <p>経営・システム・デジタルマーケティングの目線でのコンサルティングを行います。</p>
+          <button class="more_btn">MORE</button>
+        </div>
+      </div>
+      <div class="service_2">
+        <div class="service_2_bg"></div>
+        <img class='service_2_img faderotateTrigger' src="img/pic_03.jpg">
+        <div class='service_2_contents faderotateTrigger'>
+          <h3>DEVELOPMENT<br>受託開発事業</h3>
+          <p>プロジェクト/プロダクトマネージメントの支援を致します。</p>
+          <button class="more_btn">MORE</button>
+        </div>
+      </div>
+      <div class="service_3">
+        <div class="service_3_bg"></div>
+        <img class='service_3_img faderotateTrigger' src="img/pic_04.jpg">
+        <div class='service_3_contents faderotateTrigger'>
+          <h3>EDUCATION<br>教育事業</h3>
+          <p>新人エンジニアやデザイナーの教育、新人研修・プログラミング研修を徹底して行います</p>
+          <button class="more_btn">MORE</button>
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <h2>ABOUT</h2>
+      <div class="about_wrap fadeUpTrigger">
+        <table>
+          <tr>
+            <td>会社名</td>
+            <td>株式会社ABC商事</td>
+          </tr>
+          <tr>
+            <td>設立</td>
+            <td>2021年1月</td>
+          </tr>
+          <tr>
+            <td>資本金</td>
+            <td>100万円</td>
+          </tr>
+          <tr>
+            <td>代表</td>
+            <td>山田　太郎</td>
+          </tr>
+          <tr>
+            <td>所在地</td>
+            <td>〒000-0000 東京都中央区1丁目1番1号</td>
+          </tr>
+          <tr>
+            <td>電話</td>
+            <td>00-1234-5678</td>
+          </tr>
+          <tr>
+            <td>主要取引</td>
+            <td>XYZ商事<br>
+              X&YCorporation<br>
+              XYZ株式会社</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <section class="faq" id="faq">
+      <h2>FAQ</h2>
+      <div>
+        <ul class="faq_1 fadeUpTrigger">
+          <button class="faq_btn1">+</button>
+          <li class="question">
+            お見積もりの目安はいくらからでしょうか？
+          </li>
+          <li class="ans">
+            内容によって変化いたしますのでまずはお問い合わせフォームよりご相談ください。
+          </li>
+        </ul>
+        <ul class="faq_2 fadeUpTrigger">
+          <button class="faq_btn2">+</button>
+          <li class="question">
+            東京以外からでの発注は可能でしょうか
+          </li>
+          <li class="ans">
+            内容によって変化いたしますのでまずはお問い合わせフォームよりご相談ください。
+          </li>
+        </ul>
+        <ul class="faq_3 fadeUpTrigger">
+          <button class="faq_btn3">+</button>
+          <li class="question">
+            東京以外からでの発注は可能でしょうか
+          </li>
+          <li class="ans">
+            内容によって変化いたしますのでまずはお問い合わせフォームよりご相談ください。
+          </li>
+        </ul>
+        <ul class="faq_4 fadeUpTrigger">
+          <button class="faq_btn4">+</button>
+          <li class="question">
+            東京以外からでの発注は可能でしょうか
+          </li>
+          <li class="ans">
+            内容によって変化いたしますのでまずはお問い合わせフォームよりご相談ください。
+          </li>
+        </ul>
+        <!--
+          <ul class="faq_1 fadeUpTrigger">
+            <button class="faq_btn1">+</button>
+            <li class="question">
+              <a class="menu__item__link js-menu__item__link1" href="">
+                お見積もりの目安はいくらからでしょうか？
+              </a>
+              <ul class="submenu">
+                <li class="ans">
+                  内容によって変化いたしますのでまずはお問い合わせフォームよりご相談ください。
+                </li>
+              </ul>
+            </li>
+          </ul>
+        
+
+        <ul class="faq_2 fadeUpTrigger">
+          <button class="faq_btn2">+</button>
+          <li class="question">
+            <a class="menu__item__link js-menu__item__link2" href="">
+              東京以外からでの発注は可能でしょうか
+            </a>
+            <ul class="submenu">
+              <li class="ans">
+                内容によって変化いたしますのでまずはお問い合わせフォームよりご相談ください
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="faq_3 fadeUpTrigger">
+          <button class="faq_btn3">+</button>
+          <li class="question">
+            <a class="menu__item__link js-menu__item__link3" href="">
+              セミナーやイベントの企画を依頼したいのですが
+            </a>
+            <ul class="submenu">
+              <li class="ans">
+                内容によって変化いたしますのでまずはお問い合わせフォームよりご相談ください。</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="faq_4 fadeUpTrigger">
+          <button class="faq_btn4">+</button>
+          <li class="question">
+            <a class="menu__item__link js-menu__item__link4" href="">
+              WEBを媒体とした記事作成は可能ですか？
+            </a>
+            <ul class="submenu">
+              <li class="ans">
+                内容によって変化いたしますのでまずはお問い合わせフォームよりご相談ください。</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        -->
+      </div>
+
+    </section>
+    <section class="contact" id="contact">
+      <h2>CONTACT</h2>
+      <form class="form" method="post">
+        <div>
+          <label for="com_name">会社名・部署名</label>
+          <input type="text" id="user_com_name" name="user_com_name">
+        </div>
+        <div>
+          <label for="name">担当者名</label>
+          <input type="text" id="name" name="user_name">
+        </div>
+        <div>
+          <label for="mail">メールアドレス</label>
+          <input type="email" id="mail" name="user_mail">
+        </div>
+        <div>
+          <label for="tel">電話番号</label>
+          <input type="tel" id="tel" name="user_tel">
+        </div>
+        <div>
+          <label for="msg">お問い合わせ内容</label>
+          <textarea id="msg" name="user_message"></textarea>
+        </div>
+        <div class="button">
+          <button class="button_submit" type="submit">確認</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <p>株式会社ABC商事</p>
+      <small>© ABC.INC</small>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
+
 </html>
