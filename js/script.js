@@ -66,7 +66,7 @@ $(window).scroll(function () {// スクロールしたら
 //アコーディオン//
 //
 //$(function () {
-//    $('.js-menu__item__link1, .js-menu__item__link2, .js-menu__item__link3, .//js-menu__item__link4').on('click', function () {
+//    $('.question1,question2').on('click', function () {
 //      $("+.submenu", this).slideToggle();
 //      return false;
 //  });
@@ -76,14 +76,20 @@ $(function () {
     $(this).next().slideToggle();
     //openクラスをつける
     $(this).toggleClass('open');
-    //クリックされていないparentのopenクラスを取る
+    //クリックされていない親のopenクラスを取る
     $('.question').not(this).removeClass('open');
 
-    // 一つ開くと他は閉じるように
-    $('.question').not($(this)).next('.ans').slideUp();
   });
 });
-
+//$(function () {
+//  $('.question').on('click', function () {
+//    $(this).next().slideToggle();
+//    //addクラスをつける
+//    $(this).toggleClass('add');
+//    //クリックされていない親のaddクラスを取る
+//    $('.question').not(this).removeClass('add');
+//  });
+//});
   $('.faq_1').click(function(){
     $('.faq_btn1').toggleClass('add');
 

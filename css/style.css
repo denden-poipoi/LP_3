@@ -475,6 +475,34 @@ header .drawer {
           transform-origin: 50% 50%;
 }
 
+.faq_1 .faq_btn1.add2,
+.faq_1 .faq_btn2.add2,
+.faq_1 .faq_btn3.add2,
+.faq_1 .faq_btn4.add2, .faq_2 .faq_btn1.add2,
+.faq_2 .faq_btn2.add2,
+.faq_2 .faq_btn3.add2,
+.faq_2 .faq_btn4.add2, .faq_3 .faq_btn1.add2,
+.faq_3 .faq_btn2.add2,
+.faq_3 .faq_btn3.add2,
+.faq_3 .faq_btn4.add2, .faq_4 .faq_btn1.add2,
+.faq_4 .faq_btn2.add2,
+.faq_4 .faq_btn3.add2,
+.faq_4 .faq_btn4.add2 {
+  content: "";
+  position: relative;
+  left: 0%;
+  top: 30px;
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 50;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
 .faq_1 .question, .faq_2 .question, .faq_3 .question, .faq_4 .question {
   padding: 0px 0px 30px 50px;
   cursor: pointer;

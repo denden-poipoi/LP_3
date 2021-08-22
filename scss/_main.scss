@@ -139,7 +139,6 @@ header {
   background-attachment: fixed;
   background-size: cover;
   margin: 0px 100px;
-
 }
 .topics {
   .inner {
@@ -358,6 +357,22 @@ header {
       cursor: pointer;
       z-index: 50;
       transform: rotate(45deg);
+      transform-origin: 50% 50%;
+    }
+    .faq_btn1.add2,
+    .faq_btn2.add2,
+    .faq_btn3.add2,
+    .faq_btn4.add2 {
+      content: "";
+      position: relative;
+      left: 0%;
+      top: 30px;
+      margin: 0 10px;
+      font-weight: bold;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 50;
+      transform: rotate(90deg);
       transform-origin: 50% 50%;
     }
     .question {
