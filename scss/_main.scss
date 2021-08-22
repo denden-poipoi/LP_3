@@ -94,15 +94,7 @@ header {
     color: $green_blue;
     font-size: 20px;
   }
-  .logo_bg {
-    background-color: $green_blue;
-    border: solid $border_Gray 1px;
-    width: 30px;
-    height: 40px;
-    position: absolute;
-    left: 220px;
-    top: 20px;
-  }
+
   .navbar {
     ul {
       width: 600px;
@@ -478,21 +470,105 @@ footer {
     transform-origin: 50% 0;
   }
 }
+@media screen and (max-width: 1025px) {
+  .topics {
+    .inner {
+      .vision {
+        img {
+          width: 500px;
+          height: 340px;
+          margin-right: 20px;
+        }
+        &_border {
+          left: 100px;
+        }
+      }
+    }
+  }
+  .service {
+    h2 {
+      margin: 50px 0;
+    }
+    &_1,
+    &_3 {
+      height: 550px;
 
-@media screen and (max-width: 768px) {
+      &_bg {
+        @include service_bg;
+        position: relative;
+        width: 80vw;
+        left: 100px;
+        top: 150px;
+      }
+      &_img {
+        @include service_img_1024_sml;
+        position: relative;
+        left: 45%;
+        top: -300px;
+      }
+      &_contents {
+        @include service_contents_1024_sml;
+        position: relative;
+        left: 70px;
+        top: -400px;
+
+        p {
+          margin-top: 30px;
+          font-size: 12px;
+        }
+      }
+    }
+    &_2 {
+      height: 550px;
+
+      &_bg {
+        @include service_bg;
+        position: relative;
+        width: 80vw;
+        left: 76px;
+        top: 150px;
+      }
+      &_img {
+        @include service_img_1024_sml;
+        position: relative;
+        left: 7%;
+        top: -300px;
+      }
+      &_contents {
+        @include service_contents_1024_sml;
+        position: relative;
+        left: 47%;
+        top: -400px;
+
+        p {
+          margin-top: 30px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
   /*ハンバーガーメニュー*/
   header {
     display: block;
+    background-color: $White;
+    width: 100vw;
+    height: 100px;
+    top: 20px;
+    position: absolute;
 
     .drawer {
       visibility: visible;
       width: 24px;
-      right: 20px;
-      top: 25px;
+      right: 45px;
+      top: 40px;
       position: absolute;
       border-top: solid 4px $drawer;
       cursor: pointer;
       z-index: 100;
+      position: fixed;
     }
 
     .drawer::before,
@@ -555,18 +631,170 @@ footer {
     top: 9px;
     transform: rotate(45deg);
   }
+  #top {
+    position: relative;
+    top: 100px;
+    height: 700px;
+    background: url(../img/main.jpg) no-repeat center;
+    width: 85vw;
+    background-size: cover;
+    text-align: center;
+    margin: 80px auto;
+  }
+  .topics {
+    .inner {
+      .vision {
+        img {
+          width: 360px;
+          height: 270px;
+          margin-right: 20px;
+        }
+        .vision_txt {
+          width: 300px;
+          margin-left: 0;
+
+          .vision_border {
+            left: 90px;
+          }
+        }
+      }
+    }
+  }
+  .service {
+    h2 {
+      margin: 50px 0;
+    }
+    &_1,
+    &_3 {
+      height: 550px;
+
+      &_bg {
+        @include service_bg;
+        position: relative;
+        width: 80vw;
+        left: 76px;
+        top: 150px;
+      }
+      &_img {
+        @include service_img_sml;
+        position: relative;
+        left: 45%;
+        top: -300px;
+      }
+      &_contents {
+        @include service_contents_sml;
+        position: relative;
+        left: 30px;
+        top: -400px;
+
+        p {
+          margin-top: 30px;
+          font-size: 12px;
+        }
+      }
+    }
+    &_2 {
+      height: 550px;
+
+      &_bg {
+        @include service_bg;
+        position: relative;
+        width: 80vw;
+        left: 76px;
+        top: 150px;
+      }
+      &_img {
+        @include service_img_sml;
+        position: relative;
+        left: 7%;
+        top: -300px;
+      }
+      &_contents {
+        @include service_contents_sml;
+        position: relative;
+        left: 47%;
+        top: -400px;
+
+        p {
+          margin-top: 30px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .about {
+    h2 {
+      font-size: 30px;
+      margin: 70px 0;
+    }
+
+    &_wrap {
+      table {
+        width: 80vw;
+        margin-top: 50px;
+
+        td {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .faq {
+    div {
+      width: 90vw;
+
+      .faq_1,
+      .faq_2,
+      .faq_3,
+      .faq_4 {
+        width: 630px;
+        margin: 10px 70px;
+      }
+    }
+  }
+
+  .contact {
+    .form {
+      width: 80vw;
+      display: block;
+      margin-left: 100px;
+      label {
+        display: inline-block;
+        width: 100%;
+        line-height: 2;
+      }
+      input {
+        width: 90%;
+        height: 35px;
+      }
+
+      textarea {
+        width: 90%;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 376px) {
   header {
+    top: 40px;
     h3 {
       padding: 30px 0 0 30px;
-      top: 0px;
+      top: -20px;
     }
-    .logo_bg {
-      visibility: hidden;
+    .drawer {
+      visibility: visible;
+      width: 24px;
+      right: 20px;
+      top: 0px;
+      position: absolute;
+      border-top: solid 4px $drawer;
+      cursor: pointer;
+      z-index: 100;
     }
   }
+
   #top {
     height: 580px;
     background: url(../img/main.jpg) no-repeat center;
@@ -717,14 +945,26 @@ footer {
 
   .faq {
     div {
-      width: 330px;
+      width: 90vw;
+      .faq_1,
+      .faq_2,
+      .faq_3,
+      .faq_4 {
+        width: 330px;
+        margin: 10px 30px;
+
+        .question {
+          font-size: 13px;
+        }
+      }
     }
   }
 
   .contact {
     .form {
-      width: 330px;
+      width: 80vw;
       display: block;
+      margin-left: 50px;
       label {
         display: inline-block;
         width: 100%;
