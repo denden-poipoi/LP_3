@@ -63,53 +63,48 @@ $(window).scroll(function () {// スクロールしたら
   fadeIn();// 関数を実行
 });
 
-//アコーディオン//
-//
-//$(function () {
-//    $('.question1,question2').on('click', function () {
-//      $("+.submenu", this).slideToggle();
-//      return false;
-//  });
-//});
 $(function () {
-  $('.question').on('click', function () {
-    $(this).next().slideToggle();
-    //openクラスをつける
-    $(this).toggleClass('open');
-    //クリックされていない親のopenクラスを取る
-    $('.question').not(this).removeClass('open');
+  $('.faq_1').on('click', function () { //faq_1を押すと
+     $('.question1').next().slideToggle();
+    $('.question1').toggleClass('open'); //openクラスをつける
+    $('.question2,.question3,.question4').removeClass('open');//クリックされていないquestionのopenクラスを取る
+    $('.faq_btn1').toggleClass('add'); //addクラスをつける
+    $('.faq_btn2,.faq_btn3,.faq_btn4').removeClass('add');//クリックされていないquestionのopenクラスを取る
 
+    $('.ans2,.ans3,.ans4').slideUp();
+    });
+
+  $('.faq_2').on('click', function () { //faq_2を押すと
+     $('.question2').next().slideToggle();
+    $('.question2').toggleClass('open'); //openクラスをつける
+    $('.question1,.question3,.question4').removeClass('open');//クリックされていないquestionのopenクラスを取る
+    $('.faq_btn2').toggleClass('add'); //addクラスをつける
+    $('.faq_btn1,.faq_btn3,.faq_btn4').removeClass('add');//クリックされていないquestionのopenクラスを取る
+    
+    $('.ans1,.ans3,.ans4').slideUp();
   });
+
+    $('.faq_3').on('click', function () { //faq_3を押すと
+     $('.question3').next().slideToggle();
+    $('.question3').toggleClass('open'); //openクラスをつける
+    $('.question2,.question1,.question4').removeClass('open');//クリックされていないquestionのopenクラスを取る
+    $('.faq_btn3').toggleClass('add'); //addクラスをつける
+    $('.faq_btn2,.faq_btn1,.faq_btn4').removeClass('add');//クリックされていないquestionのopenクラスを取る
+
+    $('.ans2,.ans1,.ans4').slideUp();
+    });
+  
+  $('.faq_4').on('click', function () { //faq_4を押すと
+     $('.question4').next().slideToggle();
+    $('.question4').toggleClass('open'); //openクラスをつける
+    $('.question2,.question1,.question3').removeClass('open');//クリックされていないquestionのopenクラスを取る
+    $('.faq_btn4').toggleClass('add'); //addクラスをつける
+    $('.faq_btn2,.faq_btn1,.faq_btn3').removeClass('add');//クリックされていないquestionのopenクラスを取る
+
+    $('.ans2,.ans1,.ans3').slideUp();
+    });
 });
-//$(function () {
-//  $('.question').on('click', function () {
-//    $(this).next().slideToggle();
-//    //addクラスをつける
-//    $(this).toggleClass('add');
-//    //クリックされていない親のaddクラスを取る
-//    $('.question').not(this).removeClass('add');
-//  });
-//});
-  $('.faq_1').click(function(){
-    $('.faq_btn1').toggleClass('add');
-
-  });
-
-    $('.faq_2').click(function(){
-      $('.faq_btn2').toggleClass('add');
-
-    });
-
-    $('.faq_3').click(function(){
-      $('.faq_btn3').toggleClass('add');
-
-    });
-
-    $('.faq_4').click(function(){
-      $('.faq_btn4').toggleClass('add');
-
-  });
-
+  
 //スムーズスクロール//
 $('#js-nav a').on('click', function () {
   let hrefElement = $(this).attr('href');

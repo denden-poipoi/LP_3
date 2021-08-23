@@ -493,13 +493,50 @@ header .drawer {
           transform-origin: 50% 50%;
 }
 
-.faq_1 .question, .faq_2 .question, .faq_3 .question, .faq_4 .question {
+.faq_1 .question1,
+.faq_1 .question2,
+.faq_1 .question3,
+.faq_1 .question4, .faq_2 .question1,
+.faq_2 .question2,
+.faq_2 .question3,
+.faq_2 .question4, .faq_3 .question1,
+.faq_3 .question2,
+.faq_3 .question3,
+.faq_3 .question4, .faq_4 .question1,
+.faq_4 .question2,
+.faq_4 .question3,
+.faq_4 .question4 {
   padding: 0px 0px 30px 50px;
   cursor: pointer;
   position: relative;
 }
 
 .faq_1 .ans, .faq_2 .ans, .faq_3 .ans, .faq_4 .ans {
+  display: none;
+  background-color: #F3F3F3;
+  padding: 20px;
+  margin: 20px;
+}
+
+.faq_1 .question.open, .faq_2 .question.open, .faq_3 .question.open, .faq_4 .question.open {
+  padding: 0px 0px 30px 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq_1 .ans2,
+.faq_1 .ans1,
+.faq_1 .ans3,
+.faq_1 .ans4, .faq_2 .ans2,
+.faq_2 .ans1,
+.faq_2 .ans3,
+.faq_2 .ans4, .faq_3 .ans2,
+.faq_3 .ans1,
+.faq_3 .ans3,
+.faq_3 .ans4, .faq_4 .ans2,
+.faq_4 .ans1,
+.faq_4 .ans3,
+.faq_4 .ans4 {
   display: none;
   background-color: #F3F3F3;
   padding: 20px;
@@ -976,18 +1013,18 @@ footer p {
 }
 
 @media screen and (max-width: 376px) {
-  header {
-    top: 40px;
+  #header {
+    margin-top: 0;
   }
-  header h3 {
+  #header h3 {
     padding: 30px 0 0 30px;
-    top: -20px;
+    top: 0px;
   }
-  header .drawer {
+  #header .drawer {
     visibility: visible;
     width: 24px;
     right: 20px;
-    top: 0px;
+    top: 32px;
     position: absolute;
     border-top: solid 4px #666666;
     cursor: pointer;
@@ -995,34 +1032,55 @@ footer p {
   }
   #top {
     height: 580px;
+    width: 330px;
     background: url(../img/main.jpg) no-repeat center;
     background-size: cover;
-    margin: 80px 20px;
+    margin: 30px auto;
+    text-align: center;
+    position: relative;
+    top: 80px;
   }
   .topics {
     height: 850px;
+  }
+  .topics .inner .intro {
+    margin-top: 200px;
+    position: relative;
+    top: 110px;
+  }
+  .topics .inner .intro .intro_detail {
+    width: 160px;
   }
   .topics .inner .vision {
     display: unset;
   }
   .topics .inner .vision img {
     display: unset;
-    margin: 95px 0 65px 0;
+    text-align: center;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 330px;
-    height: 245px;
+    height: 235px;
+    position: relative;
+    top: 130px;
   }
   .topics .inner .vision_border {
-    left: 40%;
-    margin: 10px 0px;
+    left: 10vw;
+    margin: 10px 20px;
   }
   .topics .inner .vision .vision_txt {
     width: 330px;
-    position: absolute;
-    margin: 0px;
+    position: relative;
+    top: 160px;
+    margin: 0px auto;
     text-align: left;
   }
   .topics .inner .vision .vision_txt h2 {
     font-size: 30px;
+    left: 120px;
+    height: 85px;
   }
   .topics .inner .vision .vision_txt .vision_1 {
     padding: 0;
@@ -1130,7 +1188,10 @@ footer p {
   .faq div .faq_3,
   .faq div .faq_4 {
     width: 330px;
-    margin: 10px 30px;
+    margin: 10px 22px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .faq div .faq_1 .question,
   .faq div .faq_2 .question,
@@ -1139,9 +1200,9 @@ footer p {
     font-size: 13px;
   }
   .contact .form {
-    width: 80vw;
+    width: 330px;
     display: block;
-    margin-left: 50px;
+    margin: 0 22px;
   }
   .contact .form label {
     display: inline-block;
@@ -1149,11 +1210,13 @@ footer p {
     line-height: 2;
   }
   .contact .form input {
-    width: 90%;
+    width: 330px;
     height: 35px;
+    margin-bottom: 15px;
   }
   .contact .form textarea {
-    width: 90%;
+    width: 330px;
+    margin-bottom: 15px;
   }
 }
 
